@@ -27,20 +27,22 @@ namespace BundlingMinify.Web
                       "~/Content/site.css"));
 
             bundles.Add(new Bundle("~/bundles/NgAppes5").Include(
-                "~/Scripts/NgApp/runtime-es5.js",
-                "~/Scripts/NgApp/polyfills-es5.js",
-                "~/Scripts/NgApp/styles-es5.js",
-                "~/Scripts/NgApp/vendor-es5.js",
-                "~/Scripts/NgApp/main-es5.js"
+                "~/Scripts/NgApp/runtime-es5.*",
+                "~/Scripts/NgApp/polyfills-es5.*",
+                "~/Scripts/NgApp/styles-es5.*",
+                "~/Scripts/NgApp/vendor-es5.*",
+                "~/Scripts/NgApp/main-es5.*"
                 ));
 
             bundles.Add(new Bundle("~/bundles/NgAppes2015").Include(
-                "~/Scripts/NgApp/runtime-es2015.js",
-                "~/Scripts/NgApp/polyfills-es2015.js",
-                 "~/Scripts/NgApp/styles-es2015.js",
-                "~/Scripts/NgApp/vendor-es2015.js",
-                "~/Scripts/NgApp/main-es2015.js"
+                "~/Scripts/NgApp/runtime-es2015.*",
+                "~/Scripts/NgApp/polyfills-es2015.*",
+                 "~/Scripts/NgApp/styles-es2015.*",
+                "~/Scripts/NgApp/vendor-es2015.*",
+                "~/Scripts/NgApp/main-es2015.*"
                 ));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
